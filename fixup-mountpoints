@@ -1202,6 +1202,22 @@ case "$DEVICE" in
             "$@"
         ;;
 
+    "lilac")
+       sed -i \
+            -e 's block/bootdevice/by-name/system sda65 ' \
+            -e 's block/bootdevice/by-name/oem sda63 ' \
+            -e 's block/bootdevice/by-name/cache sda53 ' \
+            -e 's block/bootdevice/by-name/userdata sda66 ' \
+            -e 's block/bootdevice/by-name/boot sda38 ' \
+            -e 's block/bootdevice/by-name/FOTAKernel sda47 ' \
+            -e 's block/bootdevice/by-name/frp sda56 ' \
+            -e 's block/bootdevice/by-name/dsp sda37 ' \
+            -e 's block/bootdevice/by-name/misc sda54 ' \
+            -e 's block/bootdevice/by-name/modem sda36 ' \
+            -e 's block/bootdevice/by-name/bluetooth sda39 ' \
+            -e 's block/bootdevice/by-name/persist sda33 ' \
+            "$@"
+        ;;
 
     *)
 	cat <<EOF
